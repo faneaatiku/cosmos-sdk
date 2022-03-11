@@ -65,6 +65,9 @@ type (
 	ApplicationQueryService interface {
 		// RegisterNodeService registers the node gRPC Query service.
 		RegisterNodeService(client.Context)
+
+		// Return the multistore instance
+		CommitMultiStore() sdk.CommitMultiStore
 	}
 
 	// AppCreator is a function that allows us to lazily initialize an
